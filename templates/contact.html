@@ -1,0 +1,66 @@
+{% extends 'base.html'%}
+
+{% block title %} Contact Us {%endblock title%}
+
+{% block content-body%}
+
+
+<div class="container-fluid px-0">
+    <img src="https://source.unsplash.com/1400x400?contact,mobile" class="d-block w-400 mx-0" alt="icrecream">
+</div>
+
+
+<div class="container">
+    <br>
+        <h2 class="text-center">Contact Us! </h2>
+
+<form method="post" action="/contact">
+    {% csrf_token %}
+
+    <div class="mb-4 row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Customer Email</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="email" name="email" placeholder="user@example.com">
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Customer Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="username" name="username" placeholder="user">
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label for="brand" class="col-sm-2 col-form-label">IceCream Brand</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="brand" name="brand" placeholder="MotherDairy, Vadilal, etc">
+        </div>
+      </div>
+      
+      <div class="mb-3 row">
+        <label for="flavour" class="col-sm-2 col-form-label">IceCream Flavour</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="flavour" name="flavour" placeholder="Chocolate, Vanilla, etc">
+        </div>
+        </div>
+
+        <div class="mb-3 row">
+            <label for="flavour" class="col-sm-2 col-form-label">Additional Information</label>
+            <div class="col-sm-10">
+            <textarea type="text" class="form-control" placeholder="Anything else?" name="extraInformation" id="extraInformation"></textarea>
+          </div>
+        </div>
+
+<br>
+<button class="btn btn-primary" type="submit">Place Order</button>
+    </form>
+    </div>
+
+{%endblock content-body%}
+
+
+
+
+
+{%block footer%} {%endblock footer%}
